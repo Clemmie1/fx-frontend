@@ -118,7 +118,7 @@ onMounted(async () => {
                 <a href="#" class="text-sm font-medium text-primary-600 hover:underline dark:text-gray-500">Забыли пароль?</a>
               </div>
 
-              <button v-if="!isLoading" type="submit" :disabled="isLoading" class="w-full text-muted font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-gray-50">
+              <button v-if="!isLoading" type="submit" :disabled="isLoading" class="w-full text-gray-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-gray-50">
                 Войти
               </button>
               <button

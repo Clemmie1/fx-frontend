@@ -140,7 +140,7 @@ function hideModalResult() {
               </label>
               <input v-model="form.name" type="text" name="name" id="name" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-white focus:border-white block w-full p-2.5 dark:bg-fx-sidebar dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="" required />
             </div>
-            <button v-if="!isLoading" type="submit" :disabled="isLoading" class="w-full text-muted focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-50 dark:hover:bg-gray-200">
+            <button v-if="!isLoading" type="submit" :disabled="isLoading" class="w-full text-gray-700 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-50 dark:hover:bg-gray-200">
               Создать
             </button>
             <button style="cursor: not-allowed" v-else disabled class="w-full disabled text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-fx-main">
@@ -195,7 +195,7 @@ function hideModalResult() {
                                     </span>
                 </button>
               </div>
-              <button @click="hideModalResult" type="submit" class="text-muted items-center  font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-50 dark:hover:bg-gray-200">
+              <button @click="hideModalResult" type="submit" class="text-gray-700 items-center  font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-50 dark:hover:bg-gray-200">
                 OK
               </button>
             </div>

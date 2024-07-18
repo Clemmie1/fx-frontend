@@ -360,7 +360,7 @@ function getRoleDisplay(role) {
               </div>
               <div class="order-1 flex flex-col">
                 <div class="mt-0 flex flex-1 flex-col p-0">
-                  <div class="flex flex-1 flex md:hidden">
+                  <div class="flex flex-1 md:hidden">
                     <div class="flex h-full w-full data-[panel-group-direction=vertical]:flex-col flex-1" data-panel-group="" data-panel-group-direction="vertical" data-panel-group-id=":R1dvffelspla:" data-panel-group-units="percentages" style="display:flex;flex-direction:column;height:100%;overflow:hidden;width:100%">
                       <div class="flex flex-col" data-panel="" data-panel-collapsible="true" data-panel-id="systemPromptPanel" data-panel-size="25.0" id="data-panel-id-systemPromptPanel" style="flex-basis:0;flex-grow:25;flex-shrink:1;overflow:hidden">
                         <div class="group flex flex-1 flex-col gap-4">
@@ -500,7 +500,7 @@ function getRoleDisplay(role) {
                                 </div>
                               </div>
 
-                              <button @click="addMessage" class="whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 px-4 group mr-auto flex w-full flex-row items-center justify-start gap-2 rounded-none py-7 hover:bg-shallow">
+                              <button @click="addMessage" class="whitespace-nowrap text-sm font-medium lg:hover:bg-[#262626] ring-offset-background transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground h-10 px-4 group mr-auto flex w-full flex-row items-center justify-start gap-2 rounded-none py-7 hover:bg-shallow">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-circle mr-2">
                                   <circle cx="12" cy="12" r="10"></circle>
                                   <path d="M8 12h8"></path>

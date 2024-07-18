@@ -58,7 +58,7 @@ async function sendRequestPost() {
         'prompt': prompt.value.prompt,
         'result_image_link': '',
         'error': true,
-        'error_message': error.response.data.error
+        'error_message': error.response.data.error.message
       };
     }
 
@@ -68,7 +68,7 @@ async function sendRequestPost() {
         'prompt': prompt.value.prompt,
         'result_image_link': '',
         'error': true,
-        'error_message': error.response.data.error
+        'error_message': error.response.data.error.message
       };
     }
 
@@ -153,7 +153,7 @@ async function reBuildPrompt(index, prompt) {
             <div class="mt-10 max-w-2xl w-full mx-auto px-4 sm:px-6 lg:px-8">
               <div class="relative">
                 <div>
-                  <input v-model="prompt.prompt" :disabled="isLoading" type="text" class="p-4 block w-full border-gray-200 rounded-full text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Что вы хотите увидеть?">
+                  <input v-model="prompt.prompt" :disabled="isLoading" type="text" class="p-4 block w-full border-gray-200 rounded-full text-sm focus:border-white focus:ring-white disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Что вы хотите увидеть?">
                   <div class="absolute top-1/2 end-2 -translate-y-1/2">
                     <button v-if="!isLoading" :disabled="isLoading" @click="sendRequestPost" type="button" class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:text-gray-800 bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 dark:hover:text-white dark:bg-neutral-800">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal"><path d="m3 3 3 9-3 9 19-9Z"/><path d="M6 12h16"/></svg>

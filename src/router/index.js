@@ -57,14 +57,27 @@ export default router
 */
 
 import {createRouter, createWebHistory} from 'vue-router';
+import TestPage from '../components/Test.vue';
 import AuthComponent from "../components/Pages/Auth/AuthComponent.vue";
+import RegisterComponent from "../components/Pages/Auth/RegisterComponent.vue";
 import store from '../store'
-import Playground from "../components/Console/Playground/Playground.vue";
+import PlaygroundHome from "../components/Console/Playground/Playground.vue";
+import PlaygroundChat from "../components/Console/Playground/TextGeneration/Playground.vue";
+import PlaygroundTTI from "../components/Console/Playground/TextToImage/Playground.vue";
 import Keys from "../components/Console/Keys/Keys.vue";
 import Usage from "../components/Console/Usage/Usage.vue";
 import Limits from "../components/Console/Limits/Limits.vue";
+import Billing from "../components/Console/Billing/Billing.vue";
 
 const routes = [
+    {
+        path : '/test',
+        name : 'TestPage',
+        component : TestPage,
+        meta:{
+            requiresAuth:true
+        }
+    },
     {
         path : '/login',
         name : 'LoginPage',
@@ -74,11 +87,11 @@ const routes = [
         }
     },
     {
-        path : '/playground',
-        name : 'Playground',
-        component : Playground,
+        path : '/register',
+        name : 'RegisterPage',
+        component : RegisterComponent,
         meta:{
-            requiresAuth:true
+            requiresAuth:false
         }
     },
     {
@@ -105,6 +118,41 @@ const routes = [
             requiresAuth:true
         }
     },
+    {
+        path : '/settings/billing',
+        name : 'Billing',
+        component : Billing,
+        meta:{
+            requiresAuth:true
+        }
+    },
+    {
+        path : '/playground',
+        name : 'PlaygroundHome',
+        component : PlaygroundHome,
+        meta:{
+            requiresAuth:true
+        }
+    },
+    {
+        path : '/playground/chat',
+        name : 'PlaygroundChat',
+        component : PlaygroundChat,
+        meta:{
+            requiresAuth:true
+        }
+    },
+
+    {
+        path : '/playground/tti',
+        name : 'PlaygroundTTI',
+        component : PlaygroundTTI,
+        meta:{
+            requiresAuth:true
+        }
+    },
+
+
     // {
     //     path : '/register',
     //     name : 'Register',

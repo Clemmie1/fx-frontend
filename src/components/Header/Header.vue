@@ -18,7 +18,7 @@ const userAvatar = store.getters.getAvatar;
 
 function logout(){
   store.dispatch('removeAll');
-  router.push({ name: 'Login' });
+  router.push({ name: 'LoginPage' });
 }
 
 </script>

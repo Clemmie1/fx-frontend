@@ -28,6 +28,7 @@ onMounted(() => {
   initTabs();
   initTooltips();
 })
+
 </script>
 
 <template>

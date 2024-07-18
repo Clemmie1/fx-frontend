@@ -107,7 +107,7 @@ function hideModalResult() {
   <!-- Modal toggle -->
   <div class="flex">
     <div class="flex-none w-34">
-      <button @click="openModal" class="block text-muted bg-white font-medium rounded-lg text-sm px-5 py-3 text-center dark:bg-gray-50 dark:hover:bg-gray-200" type="button">
+      <button @click="openModal" class="block text-gray-700 bg-white font-medium rounded-lg text-sm px-5 py-3 text-center dark:bg-gray-50 dark:hover:bg-gray-200" type="button">
         Создать
       </button>
 

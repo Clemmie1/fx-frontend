@@ -22,7 +22,7 @@ const handleRegister = async () => {
   isLoading.value = true;
 
   try {
-    const response = await axios.post("https://api.factox.net/v1/user/register", {
+    const response = await axios.post("https://api.factox.net/v1/user-org/register", {
       name: form.value.name,
       email: form.value.email,
       password: form.value.password
@@ -52,8 +52,8 @@ const handleRegister = async () => {
     }
 
   } catch (error) {
-    console.error('Произошла ошибка при регистрации. Пожалуйста, попробуйте еще раз.');
-    toast('Произошла ошибка при регистрации. Пожалуйста, попробуйте еще раз.', {
+    // console.error('Произошла ошибка при регистрации. Пожалуйста, попробуйте еще раз.');
+    toast('Произошла ошибка. Пожалуйста, попробуйте еще раз.', {
       "theme": "dark",
       "type": "warning",
       "position": "bottom-right",

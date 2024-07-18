@@ -21,7 +21,7 @@ const handleLogin = async () => {
   isLoading.value = true;
 
   try {
-    const response = await axios.post("https://api.factox.net/v1/user/login", {
+    const response = await axios.post("https://api.factox.net/v1/user-org/login", {
       email: form.value.email,
       password: form.value.password
     });
@@ -50,12 +50,12 @@ const handleLogin = async () => {
     }
 
   } catch (error) {
-    console.error('Произошла ошибка при регистрации. Пожалуйста, попробуйте еще раз.');
-    toast('Произошла ошибка при регистрации. Пожалуйста, попробуйте еще раз.', {
+    toast('Произошла ошибка.<br>Пожалуйста, попробуйте еще раз.', {
       "theme": "dark",
       "type": "warning",
       "position": "bottom-right",
-      "transition": "zoom"
+      "transition": "zoom",
+      "dangerouslyHTMLString": true
     });
   } finally {
     isLoading.value = false;
@@ -121,11 +121,11 @@ onMounted(async () => {
               <button v-if="!isLoading" type="submit" :disabled="isLoading" class="w-full text-gray-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-gray-50">
                 Войти
               </button>
-              
+
               <button
                   v-else
                   disabled
-                  style="cursor: not-allowed;"
+                  style="cursor: progress;"
                   class="font-bold w-full text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-fx-main">
                 <svg aria-hidden="true" role="status" class="inline w-4 h-4  text-white animate-spin" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="#E5E7EB"/>

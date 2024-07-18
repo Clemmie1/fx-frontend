@@ -121,6 +121,7 @@ onMounted(async () => {
               <button v-if="!isLoading" type="submit" :disabled="isLoading" class="w-full text-gray-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-gray-50">
                 Войти
               </button>
+              
               <button
                   v-else
                   disabled
